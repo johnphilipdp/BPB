@@ -1,0 +1,12 @@
+{
+  "name": "brownpaperbag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "live-server",
+    "compile:sass": "sass --watch ./css/style.scss ./css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

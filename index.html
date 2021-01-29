@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brown Paper Bag |</title>
+  </head>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+  <body>
+    <div id="app" class="container" :class="toggledNav ? 'overflow-hidden': ''">
+      <nav class="has_indent">
+        <div
+          class="overlay"
+          :class="!toggledNav ? 'overlay_hidden' : '' "
+          @click="toggledNav = !toggledNav"
+        ></div>
+        <img src="./assets/Logo.png" alt="" />
+        <ul class="nav_items" :class="!toggledNav ? 'nav_items-hidden' : '' ">
+          <li v-for="(item,i) in navItems" :key="i">
+            <a :href="item" v-html="item"></a>
+          </li>
+          <li>
+            <span>09 307 7079</span>
+            <a href="emailto:gomainstaynz.com">gomainstaynz.com</a>
+          </li>
+        </ul>
+        <div
+          class="burger"
+          :class="toggledNav ? 'toggled' : ''"
+          @click="toggledNav = !toggledNav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <div class="divider"></div>
+      <header class="has_indent">
+        <div>
+          <h1>
+            What if <span>something happened</span>
+
+            <span class="d-hide">last night?</span>
+          </h1>
+          <p>
+            Torquem detraxit hosti et quidem rerum hic <br />
+            tenetur a natura ipsa natura incorrupte atque <br />
+            admonitionem.
+            <span class="m-hide">last night?</span>
+          </p>
+        </div>
+        <img src="./assets/hero.jpg" alt="" />
+      </header>
+      <section class="has_indent">
+        <div class="feature">
+          <h2><span>•</span> Business Protection</h2>
+          <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo
+          </p>
+          <div class="button">
+            Learn More
+            <img src="./assets/arrow.svg" alt="" />
+          </div>
+        </div>
+        <div class="feature">
+          <h2><span>•</span> Personal Protection</h2>
+          <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            quiofficia.
+          </p>
+          <div class="button">
+            Learn More
+            <img src="./assets/arrow.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer_inner has_indent">
+          <div>
+            <img class="footer_logo" src="./assets/logo-small.png" alt="" />
+            <div>
+              <p>09 307 7079</p>
+              <a href="mailto:go@mainstaynzcom">go@mainstaynzcom</a>
+            </div>
+            <ul>
+              <li>
+                <a href="">Disclaimers</a>
+              </li>
+              <li>
+                <a href="">Privacy</a>
+              </li>
+              <li>Mainstay Financial Services Limited. FSP Number 205145</li>
+            </ul>
+            <div class="social_ico">
+              <img src="./assets/fb.svg" alt="" />
+              <img src="./assets/linkedin.svg" alt="" />
+            </div>
+          </div>
+          <div>
+            <h2>Menu</h2>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Business Protection</a></li>
+              <li><a href="">Personal Protection</a></li>
+              <li><a href="">Our People</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="address">
+            <div>
+              <h2>Office Address</h2>
+              <p>
+                Suite F, Building D <br />
+                42 Tawa Drive, <br />
+                Albany, Auckland 0632
+              </p>
+            </div>
+            <div>
+              <h2>Postal Address</h2>
+              <p>
+                PO Box 5943 <br />
+                Victoria Street West <br />
+                Auckland 1142
+              </p>
+            </div>
+          </div>
+          <a href="#app" class="go-top">
+            <img src="./assets/return-to-top.svg" alt="" />
+          </a>
+        </div>
+      </footer>
+      <div class="end">
+        <div class="has_indent">
+          <p>Copyright 2020 © Mainstay Financial Services Limited</p>
+          <p>Web design by Brownpaperbag</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>
